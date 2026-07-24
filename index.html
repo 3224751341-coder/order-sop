@@ -1,0 +1,956 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>渠道商机当日转化 SOP V3 — 异乡好居悉尼</title>
+<style>
+  :root {
+    --amber: #b45309;
+    --amber-light: #f59e0b;
+    --gold: #d97706;
+    --warm-bg: #fffbeb;
+    --warm-card: #fef3c7;
+    --brown: #78350f;
+    --brown-light: #92400e;
+    --cream: #fff7ed;
+    --white: #ffffff;
+    --gray-50: #fafaf9;
+    --gray-100: #f5f5f4;
+    --gray-200: #e7e5e4;
+    --gray-300: #d6d3d1;
+    --gray-400: #a8a29e;
+    --gray-600: #57534e;
+    --gray-700: #44403c;
+    --gray-800: #292524;
+    --gray-900: #1c1917;
+    --red: #dc2626;
+    --red-light: #fef2f2;
+    --green: #059669;
+    --green-light: #ecfdf5;
+    --blue: #2563eb;
+    --blue-light: #eff6ff;
+    --purple: #7c3aed;
+    --purple-light: #f5f3ff;
+    --shadow-sm: 0 1px 2px rgba(0,0,0,.05);
+    --shadow: 0 1px 3px rgba(0,0,0,.1), 0 1px 2px rgba(0,0,0,.06);
+    --shadow-md: 0 4px 6px rgba(0,0,0,.07), 0 2px 4px rgba(0,0,0,.06);
+    --shadow-lg: 0 10px 15px rgba(0,0,0,.1), 0 4px 6px rgba(0,0,0,.05);
+    --radius: 8px;
+    --radius-lg: 12px;
+    --radius-xl: 16px;
+  }
+
+  * { margin:0; padding:0; box-sizing:border-box; }
+  html { scroll-behavior:smooth; }
+
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+    background: var(--gray-100);
+    color: var(--gray-800);
+    line-height: 1.75;
+    font-size: 15px;
+  }
+
+  /* ─── COVER ─── */
+  .cover {
+    background: linear-gradient(135deg, #92400e 0%, #b45309 40%, #d97706 100%);
+    color: #fff;
+    padding: 80px 40px 60px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+  }
+  .cover::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(ellipse at 30% 50%, rgba(255,255,255,.08) 0%, transparent 60%),
+                radial-gradient(ellipse at 70% 20%, rgba(253,230,138,.12) 0%, transparent 50%);
+  }
+  .cover * { position: relative; z-index: 1; }
+  .cover .tag {
+    display: inline-block;
+    background: rgba(255,255,255,.18);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255,255,255,.25);
+    padding: 5px 16px;
+    border-radius: 20px;
+    font-size: 13px;
+    letter-spacing: .08em;
+    margin-bottom: 28px;
+  }
+  .cover h1 {
+    font-size: 48px;
+    font-weight: 800;
+    letter-spacing: -.02em;
+    line-height: 1.2;
+    margin-bottom: 12px;
+    text-shadow: 0 2px 8px rgba(0,0,0,.2);
+  }
+  .cover .subtitle {
+    font-size: 20px;
+    font-weight: 400;
+    opacity: .9;
+    margin-bottom: 8px;
+  }
+  .cover .channel-mix {
+    font-size: 14px;
+    opacity: .8;
+    margin-bottom: 28px;
+    background: rgba(255,255,255,.12);
+    display: inline-block;
+    padding: 6px 20px;
+    border-radius: 20px;
+  }
+  .cover .meta {
+    display: flex;
+    justify-content: center;
+    gap: 32px;
+    font-size: 13px;
+    opacity: .75;
+    flex-wrap: wrap;
+  }
+  .cover .meta span { display:flex; align-items:center; gap:6px; }
+
+  /* ─── CONTAINER ─── */
+  .container {
+    max-width: 860px;
+    margin: 0 auto;
+    padding: 32px 24px 80px;
+  }
+
+  /* ─── SECTION ─── */
+  .section {
+    background: var(--white);
+    border-radius: var(--radius-xl);
+    padding: 40px;
+    margin-bottom: 24px;
+    box-shadow: var(--shadow);
+    border: 1px solid var(--gray-200);
+  }
+  .section h2 {
+    font-size: 26px;
+    font-weight: 700;
+    color: var(--brown);
+    margin-bottom: 8px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  .section h2 .icon { font-size: 28px; }
+  .section .section-desc {
+    color: var(--gray-600);
+    font-size: 14px;
+    margin-bottom: 28px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid var(--gray-200);
+  }
+  .section h3 {
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--brown-light);
+    margin: 32px 0 12px;
+  }
+  .section h3:first-of-type { margin-top: 0; }
+
+  /* ─── TABLES ─── */
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 16px 0 24px;
+    font-size: 14px;
+  }
+  thead th {
+    background: var(--warm-bg);
+    color: var(--brown);
+    font-weight: 700;
+    padding: 12px 16px;
+    text-align: left;
+    border-bottom: 2px solid var(--amber-light);
+    font-size: 13px;
+    text-transform: uppercase;
+    letter-spacing: .04em;
+    white-space: nowrap;
+  }
+  tbody td {
+    padding: 12px 16px;
+    border-bottom: 1px solid var(--gray-200);
+    vertical-align: top;
+  }
+  tbody tr:last-child td { border-bottom: none; }
+  tbody tr:hover { background: var(--cream); }
+
+  /* ─── MODEL CARDS ─── */
+  .model-cards {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin: 24px 0;
+  }
+  .model-card {
+    flex: 1;
+    min-width: 200px;
+    background: var(--warm-bg);
+    border: 1px solid #fde68a;
+    border-radius: var(--radius-lg);
+    padding: 24px;
+    text-align: center;
+  }
+  .model-card .role {
+    font-size: 22px;
+    font-weight: 700;
+    color: var(--brown);
+    margin-bottom: 4px;
+  }
+  .model-card .want {
+    font-size: 13px;
+    color: var(--gray-600);
+    margin: 12px 0 8px;
+    text-transform: uppercase;
+    letter-spacing: .06em;
+  }
+  .model-card .item {
+    font-size: 13px;
+    color: var(--gray-700);
+    padding: 3px 0;
+  }
+  .model-card.you {
+    background: linear-gradient(135deg, #fef3c7, #fde68a);
+    border-color: var(--amber-light);
+  }
+
+  /* ─── TIMELINE ─── */
+  .timeline { margin: 24px 0; position: relative; }
+  .timeline::before {
+    content: '';
+    position: absolute;
+    left: 24px;
+    top: 0;
+    bottom: 0;
+    width: 3px;
+    background: linear-gradient(to bottom, var(--amber-light), #fde68a);
+    border-radius: 2px;
+  }
+  .tl-step {
+    position: relative;
+    padding-left: 64px;
+    margin-bottom: 32px;
+  }
+  .tl-step:last-child { margin-bottom: 0; }
+  .tl-step .dot {
+    position: absolute;
+    left: 10px;
+    top: 4px;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    background: var(--brown);
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 800;
+    font-size: 14px;
+    z-index: 1;
+    box-shadow: 0 0 0 6px var(--warm-bg);
+  }
+  .tl-step .time-badge {
+    display: inline-block;
+    background: var(--amber-light);
+    color: #fff;
+    font-size: 12px;
+    font-weight: 700;
+    padding: 3px 10px;
+    border-radius: 12px;
+    margin-bottom: 6px;
+  }
+  .tl-step h4 {
+    font-size: 17px;
+    font-weight: 700;
+    color: var(--brown);
+    margin-bottom: 6px;
+  }
+  .tl-step p { font-size: 14px; color: var(--gray-700); }
+
+  /* ─── SCRIPT CARDS ─── */
+  .script-card {
+    background: var(--warm-bg);
+    border: 1px solid #fde68a;
+    border-radius: var(--radius-lg);
+    padding: 24px;
+    margin: 20px 0;
+    position: relative;
+  }
+  .script-card .scene-tag {
+    display: inline-block;
+    background: var(--brown);
+    color: #fff;
+    font-size: 12px;
+    font-weight: 700;
+    padding: 4px 14px;
+    border-radius: 14px;
+    margin-bottom: 12px;
+  }
+  .script-card .scene-tag.direct {
+    background: var(--purple);
+  }
+  .script-card .context {
+    font-size: 13px;
+    color: var(--gray-600);
+    margin-bottom: 12px;
+    font-style: italic;
+  }
+  .script-card .script-box {
+    background: var(--white);
+    border-left: 4px solid var(--amber-light);
+    border-radius: 0 var(--radius) var(--radius) 0;
+    padding: 16px 20px;
+    font-size: 14px;
+    line-height: 1.9;
+    color: var(--gray-800);
+    position: relative;
+  }
+  .script-card .script-box.direct {
+    border-left-color: var(--purple);
+  }
+  .script-card .script-box .who {
+    display: inline-block;
+    background: var(--amber-light);
+    color: #fff;
+    font-size: 11px;
+    padding: 2px 8px;
+    border-radius: 8px;
+    margin-bottom: 8px;
+    font-weight: 600;
+  }
+  .script-card .script-box .who.direct {
+    background: var(--purple);
+  }
+  .script-card .copy-hint {
+    font-size: 11px;
+    color: var(--gray-400);
+    margin-top: 8px;
+    text-align: right;
+  }
+
+  /* ─── GROUP CHAT ILLUSTRATION ─── */
+  .group-chat-demo {
+    background: #e8e5d9;
+    border-radius: var(--radius-lg);
+    padding: 24px;
+    margin: 20px 0;
+    font-size: 13px;
+  }
+  .gc-msg {
+    max-width: 80%;
+    margin-bottom: 12px;
+    padding: 10px 14px;
+    border-radius: 8px;
+    line-height: 1.6;
+    position: relative;
+  }
+  .gc-msg.others {
+    background: #fff;
+    margin-right: auto;
+    border-top-left-radius: 2px;
+  }
+  .gc-msg.me {
+    background: #95ec69;
+    margin-left: auto;
+    border-top-right-radius: 2px;
+  }
+  .gc-msg .gc-sender {
+    font-size: 11px;
+    color: #888;
+    margin-bottom: 3px;
+  }
+  .gc-msg .gc-sender.me { color: #3d6b2e; }
+  .gc-divider {
+    text-align: center;
+    font-size: 11px;
+    color: #aaa;
+    margin: 14px 0;
+  }
+
+  /* ─── LOCK TEMPLATE ─── */
+  .lock-template {
+    background: var(--white);
+    border: 2px solid #d97706;
+    border-radius: var(--radius-xl);
+    padding: 36px;
+    margin: 20px 0;
+    box-shadow: var(--shadow-lg);
+    position: relative;
+    overflow: hidden;
+  }
+  .lock-template::before {
+    content: 'LOCKED';
+    position: absolute;
+    top: -8px;
+    right: 24px;
+    background: #dc2626;
+    color: #fff;
+    font-size: 10px;
+    font-weight: 800;
+    letter-spacing: .2em;
+    padding: 6px 16px;
+    border-radius: 0 0 6px 6px;
+  }
+  .lock-template .lt-header {
+    text-align: center;
+    margin-bottom: 28px;
+    padding-bottom: 20px;
+    border-bottom: 2px dashed #fde68a;
+  }
+  .lock-template .lt-header .lt-title {
+    font-size: 24px;
+    font-weight: 800;
+    color: var(--brown);
+    letter-spacing: .04em;
+  }
+  .lock-template .lt-header .lt-no {
+    font-size: 12px;
+    color: var(--gray-400);
+    font-family: "SF Mono", "Menlo", monospace;
+  }
+  .lock-template .lt-row {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 0;
+    border-bottom: 1px solid var(--gray-100);
+    font-size: 14px;
+  }
+  .lock-template .lt-row .lt-label {
+    color: var(--gray-600);
+    font-weight: 500;
+  }
+  .lock-template .lt-row .lt-value {
+    font-weight: 700;
+    color: var(--gray-800);
+    text-align: right;
+  }
+  .lock-template .lt-row .lt-value.price {
+    color: #dc2626;
+    font-size: 16px;
+  }
+  .lock-template .lt-notice {
+    background: var(--green-light);
+    border: 1px solid #a7f3d0;
+    border-radius: var(--radius);
+    padding: 14px 18px;
+    margin-top: 24px;
+    font-size: 13px;
+    color: #065f46;
+    line-height: 1.8;
+  }
+  .lock-template .lt-contact {
+    margin-top: 20px;
+    padding-top: 16px;
+    border-top: 1px solid var(--gray-200);
+    font-size: 13px;
+    color: var(--gray-600);
+    text-align: center;
+  }
+
+  /* ─── FLOW ─── */
+  .flow { display:flex; gap:12px; flex-wrap:wrap; margin:20px 0; align-items:flex-start; }
+  .flow-step {
+    flex: 1;
+    min-width: 120px;
+    background: var(--cream);
+    border-radius: var(--radius-lg);
+    padding: 20px 16px;
+    text-align: center;
+    position: relative;
+  }
+  .flow-step .fs-num {
+    width: 28px; height: 28px;
+    background: var(--brown);
+    color: #fff;
+    border-radius: 50%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 13px;
+    font-weight: 800;
+    margin-bottom: 8px;
+  }
+  .flow-step .fs-who {
+    font-size: 11px;
+    color: var(--amber);
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: .06em;
+    margin-bottom: 4px;
+  }
+  .flow-step .fs-act {
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--gray-800);
+  }
+  .flow-step .fs-time {
+    font-size: 11px;
+    color: var(--gray-400);
+    margin-top: 4px;
+  }
+  .flow-step.highlight-step {
+    background: #fef3c7;
+    border: 2px solid #f59e0b;
+  }
+  .flow-arrow {
+    display: flex;
+    align-items: center;
+    font-size: 20px;
+    color: var(--amber-light);
+    flex-shrink: 0;
+    padding-top: 20px;
+  }
+
+  /* ─── ALERT BOXES ─── */
+  .alert {
+    border-radius: var(--radius-lg);
+    padding: 20px 24px;
+    margin: 20px 0;
+    font-size: 14px;
+    line-height: 1.8;
+    display: flex;
+    gap: 12px;
+  }
+  .alert .alert-icon { font-size: 20px; flex-shrink: 0; }
+  .alert.danger { background: var(--red-light); border: 1px solid #fecaca; color: #7f1d1d; }
+  .alert.success { background: var(--green-light); border: 1px solid #a7f3d0; color: #065f46; }
+  .alert.info { background: var(--blue-light); border: 1px solid #bfdbfe; color: #1e3a5f; }
+  .alert.warn { background: var(--warm-bg); border: 1px solid #fde68a; color: #78350f; }
+  .alert.purple { background: var(--purple-light); border: 1px solid #ddd6fe; color: #3b0764; }
+
+  /* ─── CHECKLIST ─── */
+  .checklist { list-style: none; margin: 16px 0; }
+  .checklist li {
+    padding: 10px 16px 10px 36px;
+    position: relative;
+    border-bottom: 1px solid var(--gray-100);
+    font-size: 14px;
+  }
+  .checklist li::before {
+    content: '☐';
+    position: absolute;
+    left: 8px;
+    color: var(--amber-light);
+    font-size: 16px;
+    font-weight: 700;
+  }
+
+  /* ─── MISC ─── */
+  .highlight { background: linear-gradient(180deg, transparent 60%, #fde68a 60%); padding: 0 2px; }
+  .badge {
+    display: inline-block;
+    font-size: 11px;
+    font-weight: 700;
+    padding: 2px 8px;
+    border-radius: 8px;
+    vertical-align: middle;
+    margin: 0 2px;
+  }
+  .badge.red { background: #fecaca; color: #991b1b; }
+  .badge.green { background: #a7f3d0; color: #065f46; }
+  .badge.amber { background: #fde68a; color: #78350f; }
+  .badge.purple { background: #ddd6fe; color: #5b21b6; }
+  .divider {
+    border: none;
+    border-top: 1px solid var(--gray-200);
+    margin: 32px 0;
+  }
+  code {
+    background: var(--gray-100);
+    padding: 1px 6px;
+    border-radius: 4px;
+    font-size: .9em;
+    font-family: "SF Mono", "Menlo", "Consolas", monospace;
+  }
+  strong { color: var(--brown); }
+
+  /* ─── PRINT ─── */
+  @media print {
+    body { background: #fff; font-size: 13px; }
+    .cover { padding: 40px 30px 30px; }
+    .cover h1 { font-size: 32px; }
+    .container { max-width: 100%; padding: 0; }
+    .section { box-shadow: none; border: 1px solid #ddd; break-inside: avoid; padding: 28px; margin-bottom: 16px; }
+    .script-card, .lock-template, .alert { break-inside: avoid; }
+    .timeline::before { left: 18px; }
+    .tl-step { padding-left: 50px; }
+    .tl-step .dot { left: 6px; width: 26px; height: 26px; font-size: 12px; }
+    .group-chat-demo { break-inside: avoid; background: #f9f9f9; }
+  }
+
+  /* ─── SIDEBAR ─── */
+  .sidebar {
+    position: fixed;
+    right: max(16px, calc((100vw - 860px) / 2 - 180px));
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 100;
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    max-height: 70vh;
+    overflow-y: auto;
+  }
+  .sidebar a {
+    display: block;
+    font-size: 11px;
+    color: var(--gray-400);
+    text-decoration: none;
+    padding: 5px 10px;
+    border-radius: 6px;
+    white-space: nowrap;
+    transition: all .15s;
+    border-left: 2px solid transparent;
+  }
+  .sidebar a:hover {
+    color: var(--brown);
+    background: var(--warm-bg);
+    border-left-color: var(--amber-light);
+  }
+  .sidebar a.active {
+    color: var(--brown);
+    font-weight: 700;
+    background: var(--warm-bg);
+    border-left-color: var(--brown);
+  }
+  @media (max-width: 1200px) {
+    .sidebar { display: none; }
+  }
+
+  @media (max-width: 640px) {
+    .cover h1 { font-size: 28px; }
+    .cover .subtitle { font-size: 15px; }
+    .section { padding: 24px 16px; }
+    .flow { flex-direction: column; }
+    .flow-arrow { transform: rotate(90deg); justify-content: center; padding-top:0; }
+    .model-cards { flex-direction: column; }
+    .lock-template .lt-row { flex-direction: column; gap: 2px; }
+    .lock-template .lt-row .lt-value { text-align: left; }
+    .gc-msg { max-width: 95%; }
+  }
+</style>
+</head>
+<body>
+
+<!-- ═══════════════ COVER ═══════════════ -->
+<div class="cover">
+  <div class="tag">第三战队 · 澳新团队 · 当日下订单</div>
+  <h1>当日下订单</h1>
+  <div class="subtitle">拿到商机 → 当天让学生锁房</div>
+  <div class="meta">
+    <span>📅 2026-07-24</span>
+    <span>📌 V4.0</span>
+    <span>🪖 第三战队 · 澳新</span>
+  </div>
+</div>
+
+<div class="container">
+
+<div style="text-align:right;padding:0 0 16px;"><a href="index.html" style="font-size:13px;color:var(--gray-400);text-decoration:none;">← 工具箱（全部SOP）</a></div>
+
+<!-- ═══════════════ SIDEBAR ═══════════════ -->
+<nav class="sidebar">
+  <a href="#rhythm">⏱ 四步节奏</a>
+  <a href="#scripts">💬 话术包</a>
+  <a href="#source">📊 来源区分</a>
+  <a href="#pitfalls">⚡ 避雷清单</a>
+  <a href="#checklist">✅ 自检清单</a>
+  <a href="#quick-ref">🗂 速查卡</a>
+</nav>
+
+<!-- ═══════════════ 一、四步节奏 ═══════════════ -->
+<div class="section" id="rhythm">
+  <h2><span class="icon">⏱</span> 一、当日下订单四步节奏</h2>
+  <div class="section-desc">拿到商机 → 当天让学生下单。</div>
+
+  <div class="timeline">
+    <div class="tl-step">
+      <div class="dot">1</div>
+      <span class="time-badge">拿到商机后 5 分钟内</span>
+      <h4>第一步：首次响应 + 需求快筛</h4>
+      <p><strong>动作：</strong>一条欢迎消息 + 两个精准问题。不要让对话冷超过5分钟。</p>
+      <p style="margin-top:8px;"><strong>模板：</strong>「XX同学/阿姨好！👋 我是异乡好居悉尼的[名字]，专门做学生公寓。你大概什么时间过来？预算方面有什么想法吗？我按你的情况精准匹配～」</p>
+      <p style="margin-top:8px;color:var(--gray-600);">⚠️ 只问<strong>两个问题</strong>（入住时间 + 预算）。一次问太多 = 学生不想回。</p>
+    </div>
+
+    <div class="tl-step">
+      <div class="dot">2</div>
+      <span class="time-badge">拿到需求后 10 分钟内</span>
+      <h4>第二步：匹配房源 + 铺垫优惠</h4>
+      <p><strong>动作：</strong>匹配 1-2 个房源。发房源卡片（图片+价格+卖点），<strong>先铺垫优惠和价值，不要上来就喊锁房</strong>。</p>
+      <p style="margin-top:8px;"><strong>关键：分两步走——</strong>先让学生觉得「这个值」，再邀请他锁。直接喊「很抢手快锁」= 太急，学生本能防御。</p>
+    </div>
+
+    <div class="tl-step">
+      <div class="dot">3</div>
+      <span class="time-badge">铺垫到位后</span>
+      <h4>第三步：小程序下单</h4>
+      <p><strong>动作：</strong>在第二步的价值/优惠铺垫之后，自然地过渡到锁房邀请。核心句式：「这个优惠今天有效 + 免费锁不亏 + 不合适随时放」。</p>
+      <p style="margin-top:8px;"><strong>下单方式：</strong>学生同意后，把小程序链接发给他填写信息，你帮他提交申请——这就完成了<strong>当日下订单</strong>。下单后房间被系统占住，不付款也锁定优惠。</p>
+      <p style="margin-top:8px;"><strong>下单确认：</strong>提交完成后，回复一条确认消息：「收到！已帮你下单[公寓名][房型]，优惠已锁定，24h内有效👌」——简洁干脆。</p>
+    </div>
+
+    <div class="tl-step">
+      <div class="dot">?</div>
+      <span class="time-badge" style="background:#dc2626;">穿插：不回复怎么办？</span>
+      <h4>如果学生/家长发了消息后不回复</h4>
+      <p><strong>30-60分钟后：</strong>发一条<strong>补充价值</strong>消息，不是催回复。比如：「对了，这个公寓我刚才又看了下，[某个加分项，如：健身房免费/楼下就是超市]。你先看看，不着急回～」</p>
+      <p style="margin-top:6px;"><strong>当天晚上还没回：</strong>发一条轻松的收尾。「XX同学，今天发的房源你先看看，有问题随时问我。房间我帮你留意着👌」——存在感+不施压。</p>
+      <p style="margin-top:6px;"><strong>第二天还没回：</strong>大概率没兴趣或时机不对。<strong>不要催。</strong>发最后一条温和收尾：「之前那个户型还在，想了解随时找我～」然后暂停主动推，等对方回。隔3-5天再发一条新信息（不同内容），不要重复发同一个房源。</p>
+    </div>
+  </div>
+
+  <div class="alert warn">
+    <span class="alert-icon">⚠️</span>
+    <div><strong>什么时候调整节奏？</strong><br>
+    ① 学生说「还没拿到offer/签证」→ 用 <strong>No Visa No Pay</strong>：「这个公寓支持 No Visa No Pay——签证/offer没下来可以全额退，不用担心。先下单占优惠，签证有问题随时退，没损失。」——消除核心顾虑后再下单<br>
+    ② 家长说想等一等 → <strong>不要假承诺</strong>（不说「帮你留着」，不下单确实留不住）。可以问：「理解！主要是什么方面想再比较一下？是价格、位置还是户型？我看看有没有更合适的可以一起发你参考。」——了解真实顾虑，展示其他选择，但不push下单<br>
+    ③ 学生问了问题你还没回答 → <strong>先回答清楚再下单</strong>，不要跳过问题直接逼单</div>
+  </div>
+</div>
+
+<!-- ═══════════════ 二、话术包 ═══════════════ -->
+<div class="section" id="scripts">
+  <h2><span class="icon">💬</span> 二、话术包：先铺垫 → 再锁房</h2>
+  <div class="section-desc">核心逻辑：<strong>先让学生觉得值，再让他觉得急</strong>。顺序不能反。直接喊锁房 = 学生防御机制启动。</div>
+
+  <h3>标准两步走流程</h3>
+  <table>
+    <thead><tr><th>步骤</th><th>做什么</th><th>学生心理</th></tr></thead>
+    <tbody>
+      <tr><td><span class="badge amber">Step 1</span></td><td><strong>铺垫价值 + 优惠</strong>：房源核心卖点（位置/房型/价格）+ 当前优惠内容 + 优惠有效期</td><td>「这个不错，值这个价」</td></tr>
+      <tr><td><span class="badge green">Step 2</span></td><td><strong>邀请锁房</strong>：免费锁、不亏、随时释放。把锁房包装成「帮你占个便宜」而不是「你做个决定」</td><td>「反正不亏，先占上」</td></tr>
+    </tbody>
+  </table>
+
+  <!-- Scene 1: 标准锁房 -->
+  <div class="script-card">
+    <span class="scene-tag">场景一：标准锁房（最高频）</span>
+    <div class="context">拿到需求→匹配房源→现在要推+锁。Step 1 + Step 2 可以是一条长消息，也可以是两条快速连发的消息。</div>
+    <div class="script-box">
+      <span class="who">💬 发给学生/家长</span><br><br>
+      <strong>帮你匹配了 [公寓名] 的 [房型]👇</strong><br>
+      📍 [位置：步行XX学校X分钟]<br>
+      💰 <strong>$XXX/周</strong>（现在有个限时优惠，这个价格比平时低了$XX）<br>
+      🏠 [房型特征：独立卫浴/朝北/有空调]<br>
+      🎁 优惠：<strong>[具体优惠，如免首周/送床品]</strong>，今天之内锁定有效<br><br>
+      <strong>我先帮你免费锁了？</strong>不用付钱，就是把优惠和房间占住。接下来24小时内决定就行，不合适随时释放，没任何损失。主要是不锁的话优惠过了就没了，先占上不亏～
+    </div>
+    <div class="copy-hint">⬆ 顺序：卖点→价格→优惠→有效期→锁房。每一步都在铺垫下一步。</div>
+  </div>
+
+  <!-- Scene 2 -->
+  <div class="script-card">
+    <span class="scene-tag">场景二：学生嫌贵/在比价</span>
+    <div class="context">学生说「有点贵」「XX公寓更便宜」</div>
+    <div class="script-box">
+      <span class="who">💬 发给学生</span><br><br>
+      理解，多比较是对的👍<br><br>
+      这个公寓现在这个价格其实是因为<strong>[优惠原因，如开学季活动/新客户优惠]</strong>，原价是$XXX。而且它包含<strong>[附加值：水电网/健身房/等]</strong>，算下来其实比那些看起来便宜但不包的公寓划算。<br><br>
+      <strong>这个优惠今天有效，我先帮你锁着？</strong>免费的，你继续比别的，不合适随时放。万一别家不合适，这间还在，而且锁的是优惠价——怎么着都不亏。
+    </div>
+    <div class="copy-hint">⬆ 先讲「为什么值」（优惠原因+附加值），再锁。不否定比价。</div>
+  </div>
+
+  <!-- Scene 3 -->
+  <div class="script-card">
+    <span class="scene-tag">场景三：学生拖延/再看看</span>
+    <div class="context">「我再看看」「不着急」「还要等别的offer」</div>
+    <div class="script-box">
+      <span class="who">💬 发给学生</span><br><br>
+      完全理解，多看几家是对的👍<br><br>
+      不过有个小建议——<strong>先锁一间保底</strong>，免费的，你该看别的继续看。主要是现在这个优惠确实不错，锁了之后你慢慢挑，<strong>有更好的随时换，这间还在当备选。</strong><br><br>
+      悉尼这边高峰期好户型确实走得快，先锁不亏，放了也没损失。我1分钟帮你搞定～
+    </div>
+    <div class="copy-hint">⬆ 「保底」「备选」「不亏」——锁房不是做决定，是买保险</div>
+  </div>
+
+  <!-- Scene 4: 不回复 -->
+  <div class="script-card">
+    <span class="scene-tag">场景四：发了消息不回复</span>
+    <div class="context">你发了房源+锁房邀请，学生/家长没回。分三个时间节点处理。</div>
+    <div class="script-box">
+      <span class="who">💬 30-60分钟后（补充价值）</span><br>
+      对了XX，这个公寓我刚才又看了下，<strong>[一个加分项，如：健身房是24小时的/楼下有亚超/有中文前台]</strong>。你先看看，不着急回～<br><br>
+      <span class="who" style="margin-top:12px;">💬 当天晚上（温和收尾）</span><br>
+      XX同学，今天发的那个房源你先看看，有问题随时问我。房间我帮你留意着👌<br><br>
+      <span class="who" style="margin-top:12px;">💬 第二天还没回（换类别）</span><br>
+      之前发的那个户型参考一下～另外我又看了个<strong>[不同类别/不同公寓]</strong>的也不错，价格$XXX，[一句话卖点]。你对比看看👇<br>
+      [附新公寓图片]<br><br>
+      <span style="color:var(--gray-600);">→ 不回就按 <strong>1-3-5-7-9 节奏</strong>：第1天已联系 → 第3天换个类别/话题 → 第5天发一条行业资讯/攻略 → 第7天发新优惠 → 第9天轻松问候。每次发<strong>不同内容</strong>，不重复推同一个房源。中间客户回了就切回正常对话。</span>
+    </div>
+    <div class="copy-hint">⬆ 三次梯度：补充价值 → 温和存在 → 体面退出。绝不连续追问。</div>
+  </div>
+
+  <h3>话术铁律</h3>
+  <table>
+    <thead><tr><th>#</th><th>铁律</th><th>原因</th></tr></thead>
+    <tbody>
+      <tr><td>1</td><td><strong>先铺垫再锁房</strong>：价值→优惠→有效期→锁房，顺序不能反</td><td>直接喊锁房=学生本能防御。先让他觉得值，锁房变成顺水推舟</td></tr>
+      <tr><td>2</td><td><strong>每条锁房话术必须带「不用付钱」「随时释放」</strong></td><td>零风险是锁房的前提。不提退出路径，学生不敢动</td></tr>
+      <tr><td>3</td><td><strong>每次只推1个房源，最多2个</strong></td><td>5个=分析瘫痪=「我回去看看」。1主打+1备选，够了</td></tr>
+      <tr><td>4</td><td><strong>学生不回复时，补充价值 > 追问</strong></td><td>「在吗」「考虑得怎么样」=无效+惹人烦。给新信息才是推进</td></tr>
+    </tbody>
+  </table>
+</div>
+
+<!-- ═══════════════ 三、来源简要区分 ═══════════════ -->
+<div class="section" id="source">
+  <h2><span class="icon">📊</span> 三、不同来源的简单区分</h2>
+  <div class="section-desc">客户本质一样——都是找悉尼学生公寓。来源不同只是入口不同，<strong>锁房逻辑完全一样</strong>。注意两个小差异即可。</div>
+
+  <table>
+    <thead><tr><th>来源</th><th>沟通场景</th><th>唯一要注意的</th></tr></thead>
+    <tbody>
+      <tr>
+        <td><span class="badge amber">渠道</span>（顾问拉群）</td>
+        <td>微信群，顾问也在里面</td>
+        <td>在群里沟通，不要私下加学生</td>
+      </tr>
+      <tr>
+        <td><span class="badge purple">网络/小红书</span></td>
+        <td>微信1v1 或 小红书私信</td>
+        <td>没有第三方背书，前3条消息内建立专业印象（报合作公寓名+精准提问）</td>
+      </tr>
+      <tr>
+        <td><span class="badge green">老带新</span></td>
+        <td>微信1v1</td>
+        <td>第一条消息就提推荐人名字——信任最快。省去建立专业印象的步骤</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div class="alert info">
+    <span class="alert-icon">💡</span>
+    <div>一句话记住：<strong>渠道多了一个围观者，直客少了背书但少了拘束，老带新起步最快。</strong>除此以外，上面的话术和节奏都一样用。</div>
+  </div>
+</div>
+
+<!-- ═══════════════ 四、避雷清单 ═══════════════ -->
+<div class="section" id="pitfalls">
+  <h2><span class="icon">⚡</span> 四、避雷清单</h2>
+  <div class="section-desc">少踩坑就是快。以下每条都是真实翻过的。</div>
+
+  <div class="alert danger">
+    <span class="alert-icon">1</span>
+    <div><strong>不要跳过价值铺垫直接喊锁房。</strong>「这个很抢手快锁」→ 学生本能防御。先让他觉得值，锁房是顺水推舟。</div>
+  </div>
+
+  <div class="alert danger">
+    <span class="alert-icon">2</span>
+    <div><strong>不要不给退出路径。</strong>每条锁房话术必须带「不用付钱」「随时释放」「没损失」。锁房=占便宜，不是做决定。</div>
+  </div>
+
+  <div class="alert danger">
+    <span class="alert-icon">3</span>
+    <div><strong>不要给超过2个选项。</strong>5个房源=瘫痪=「回去看看」。1个主打，最多1个备选。</div>
+  </div>
+
+  <div class="alert danger">
+    <span class="alert-icon">4</span>
+    <div><strong>不要伪造稀缺。</strong>「最后一间」官网还有5间=穿帮=信任归零。用真实的：优惠截止时间、真实低库存、季节高峰。</div>
+  </div>
+
+  <div class="alert danger">
+    <span class="alert-icon">5</span>
+    <div><strong>不要学生不回就连续追问。</strong>「在吗」「怎么样了」=惹人烦。不回→给新信息→等→还不行→收。三次梯度见话术场景四。</div>
+  </div>
+
+  <div class="alert danger">
+    <span class="alert-icon">6</span>
+    <div><strong>学生不回复不要连续追问同一房源。</strong>换类别、换话题、换节奏。一直发同一个东西=骚扰。走1-3-5-7-9梯度，每次给新信息。</div>
+  </div>
+</div>
+
+<!-- ═══════════════ 五、自检清单 ═══════════════ -->
+<div class="section" id="checklist">
+  <h2><span class="icon">✅</span> 五、下订单自检清单</h2>
+  <div class="section-desc">每次拿到商机，逐项打勾。</div>
+
+  <ul class="checklist">
+    <li><strong>5分钟内首次响应</strong>：欢迎+两个问题（入住时间+预算）</li>
+    <li><strong>10分钟内匹配房源</strong>：1个主打，最多1个备选</li>
+    <li><strong>先铺垫再锁房</strong>：房源→卖点→优惠→有效期→锁房，顺序对</li>
+    <li><strong>锁房邀请带三个关键词</strong>：不用付钱 / 随时释放 / 没损失</li>
+    <li><strong>学生同意后立刻发小程序链接</strong>：帮他填写提交，完成下单</li>
+    <li><strong>不回复走梯度</strong>：补充价值→温和收尾→第二天换类别→1-3-5-7-9节奏</li>
+    <li><strong>渠道场景在群里完成所有沟通</strong>：不私加学生</li>
+  </ul>
+</div>
+
+<!-- ═══════════════ 六、速查卡 ═══════════════ -->
+<div class="section" id="quick-ref">
+  <h2><span class="icon">🗂</span> 六、话术速查卡</h2>
+  <div class="section-desc">直接复制，替换 [ ] 内容。</div>
+
+  <h3>A. 首次响应</h3>
+  <div class="script-card">
+    <div class="script-box">
+      <span class="who">💬 拿到商机后第一条消息</span><br><br>
+      XX同学/阿姨好！👋 我是异乡好居悉尼的[名字]，专门做学生公寓。<br>
+      你大概什么时间过来？预算方面有什么想法吗？我按你的情况精准匹配～
+    </div>
+  </div>
+
+  <h3>B. 标准锁房（先铺垫再锁）</h3>
+  <div class="script-card">
+    <div class="script-box">
+      <span class="who">💬 匹配房源后发送</span><br><br>
+      帮你匹配了 <strong>[公寓名]</strong> 的 <strong>[房型]</strong>👇<br>
+      📍 [位置] ｜ 💰 <strong>$XXX/周</strong>（优惠价，比平时低$XX）<br>
+      🏠 [房型特征] ｜ 🎁 <strong>[具体优惠]</strong>，今天之内锁定有效<br><br>
+      <strong>我先帮你免费锁了？</strong>不用付钱，不合适随时释放。先占上不亏～
+    </div>
+  </div>
+
+  <h3>C. 学生嫌贵/比价</h3>
+  <div class="script-card">
+    <div class="script-box">
+      <span class="who">💬 比价场景</span><br><br>
+      理解，多比较是对的👍 这个价格是因为<strong>[优惠原因]</strong>，而且包含<strong>[附加值]</strong>，算下来其实更划算。<br>
+      <strong>优惠今天有效，我先帮你锁着？</strong>免费的，你继续比，不合适随时放。怎么着都不亏～
+    </div>
+  </div>
+
+  <h3>D. 学生拖延/再看看</h3>
+  <div class="script-card">
+    <div class="script-box">
+      <span class="who">💬 拖延场景</span><br><br>
+      完全理解👍 先<strong>锁一间保底</strong>？免费的，你继续看别的，有更好的随时换。<br>
+      先锁不亏，放了也没损失。1分钟搞定～
+    </div>
+  </div>
+
+  <h3>E. 不回复（三次梯度）</h3>
+  <div class="script-card">
+    <div class="script-box">
+      <span class="who">💬 30-60分钟后</span>
+      对了，这个公寓<strong>[一个加分项]</strong>。你先看看，不着急回～<br><br>
+      <span class="who">💬 当晚</span>
+      今天发的房源你先看看，有问题随时问我。房间帮你留意着👌<br><br>
+      <span class="who">💬 第二天</span>
+      之前那个户型还在，想了解随时找我～<br>
+      <span style="color:var(--gray-600);">→ 然后停。等3-5天再发新内容。</span>
+    </div>
+  </div>
+</div>
+
+<!-- ═══════════════ FOOTER ═══════════════ -->
+<div style="text-align:center;padding:40px 0;color:var(--gray-400);font-size:13px;">
+  <p>第三战队 · 澳新团队 · 当日下订单</p>
+  <p>V4.0 — 2026-07-24 — 梁赛威 (VX)</p>
+</div>
+
+</div>
+
+<!-- ═══════════════ WATERMARK ═══════════════ -->
+<div style="position:fixed;bottom:20px;right:24px;font-size:16px;color:rgba(120,53,15,0.10);pointer-events:none;z-index:0;user-select:none;font-style:italic;">Murphy</div>
+
+</body>
+</html>
